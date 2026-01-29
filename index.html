@@ -18,15 +18,19 @@
     <div class="row mt-2">
       <div id="divBotones" class="col text-center">
         <button id="btnNuevo" class="btn btn-danger">Nuevo juego</button>
-        <button id="btnPedir" class="btn btn-primary">Pedir carta</button>
-        <button id="btnDetener" class="btn btn-primary">Detener</button>
+        <button disabled="disabled" id="btnPedir" class="btn btn-primary">
+          Pedir carta
+        </button>
+        <button disabled="disabled" id="btnDetener" class="btn btn-primary">
+          Detener
+        </button>
       </div>
     </div>
 
     <div class="row container">
       <div class="col">
         <h1>Jugador 1 - <small> 0 </small></h1>
-        <div id="jugador-cartas">
+        <div id="jugador-cartas" class="divCartas">
           <!-- <img class="carta" src="assets/cartas/10H.png" alt="Carta" /> -->
           <!-- <img class="carta" src="assets/cartas/10H.png" alt="Carta" /> -->
           <!-- <img class="carta" src="assets/cartas/10H.png" alt="Carta" /> -->
@@ -37,7 +41,7 @@
     <div class="row container mt-2">
       <div class="col">
         <h1>Computadora- <small> 0 </small></h1>
-        <div id="computadora-cartas">
+        <div id="computadora-cartas" class="divCartas">
           <!-- <img class="carta" src="assets/cartas/2D.png" alt="Carta" /> -->
           <!-- <img class="carta" src="assets/cartas/2D.png" alt="Carta" /> -->
           <!-- <img class="carta" src="assets/cartas/2D.png" alt="Carta" /> -->
@@ -47,5 +51,10 @@
     <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
     <script src="assets/js/undescore-min.js"></script>
     <script src="assets/js/juego.js"></script>
+    <script>
+      document.querySelector("#btnNuevo").addEventListener("click", () => {
+        miModulo.nuevojuego();
+      });
+    </script>
   </body>
 </html>
